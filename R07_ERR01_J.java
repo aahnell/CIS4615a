@@ -3,23 +3,20 @@
  * Ashley Ahnell
  * CIS 4614 Fall 2024
  * Rule 07. Exceptional Behavior (ERR)
- * 
+ * Status: Fixed
  ******************************************************************************/
 
- // Non-compliant Code Example
- public class ExceptionExample {
+ // Compliant Code Example
+public class ExceptionExample {
     public static void main(String[] args) {
         int[] numbers = {1, 2, 3, 4, 5};
 
-        try {
-            // Improper use of exception for control flow
-            for (int i = 0; i <= numbers.length; i++) {
-                System.out.println(numbers[i]);
-            }
-        } catch (ArrayIndexOutOfBoundsException e) {
-            System.out.println("Caught an exception! Used for control flow.");
+        // Properly check the length before accessing the array
+        for (int i = 0; i < numbers.length; i++) { // Change <= to <
+            System.out.println(numbers[i]);
         }
-        
+
         System.out.println("Program continues...");
     }
 }
+
