@@ -8,7 +8,7 @@
 
  // Non-compliant Code Example
  public class VisibilityExample {
-    private static boolean flag = false;
+    private static volatile boolean flag = false; // Declare flag as volatile
 
     public static void main(String[] args) {
         Thread writerThread = new Thread(() -> {
