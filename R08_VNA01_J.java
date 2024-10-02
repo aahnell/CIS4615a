@@ -6,7 +6,7 @@
  * 
  ******************************************************************************/
 
- // Non-compliant Code Example
+ // Non-Compliant Code Example
  public class VisibilityExample {
     private static boolean flag = false;
 
