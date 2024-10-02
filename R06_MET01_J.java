@@ -6,7 +6,7 @@
  * Status: Fixed
  ******************************************************************************/
 
- // Non-Compliant Code Example
+ // Compliant Code Example
  public class VulnerableExample {
 
     // Method that has been corrected to handle potential vulnerabilities
