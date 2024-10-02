@@ -6,7 +6,7 @@
  * 
  ******************************************************************************/
 
- // Non-compliant Code Exampleeeeeeeeeeeeeeeeeee
+ // Non-compliant Code Example
  import java.util.logging.Logger;
 
 public class VulnerableLogin {
