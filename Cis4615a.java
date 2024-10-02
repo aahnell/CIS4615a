@@ -1,6 +1,6 @@
 /******************************************************************************
  *  Compilation:  javac Cis4615a.java
- *  Execution:    java Cis4615??????(a)
+ *  Execution:    java Cis4615a
  *
  *  Prints 
  *    "Hello, World - from the class of CIS4615 - Fall 2024 - Ashley Ahnell".
