@@ -6,7 +6,7 @@
  * 
  ******************************************************************************/
 
- // Non-compliant Code Example
+ // Non-Compliant Code Example
  public class ThreadApiExample {
     public static void main(String[] args) {
         // Creating threads using the Thread class directly
