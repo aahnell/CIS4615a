@@ -6,7 +6,7 @@
  * 
  ******************************************************************************/
 
- // Non-compliant Code Example
+ // Non-Compliant Code Example
  public class InitializationExample {
 
     // Vulnerable method that uses an uninitialized variable
