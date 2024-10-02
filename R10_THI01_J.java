@@ -3,14 +3,15 @@
  * Ashley Ahnell
  * CIS 4614 Fall 2024
  * Rule 10. Thread APIs (THI)
- * 
+ * Status: Fixed
  ******************************************************************************/
 
- // Non-compliant Code Example
+ // Compliant Code Example
  public class ThreadApiExample {
     public static void main(String[] args) {
-        // Creating threads using the Thread class directly
-        Thread thread1 = new Thread() {
+        // Creating tasks using the Runnable interface
+        Runnable task1 = new Runnable() {
+            @Override
             public void run() {
                 for (int i = 0; i < 5; i++) {
                     System.out.println("Thread 1: " + i);
@@ -18,7 +19,8 @@
             }
         };
 
-        Thread thread2 = new Thread() {
+        Runnable task2 = new Runnable() {
+            @Override
             public void run() {
                 for (int i = 0; i < 5; i++) {
                     System.out.println("Thread 2: " + i);
@@ -26,7 +28,20 @@
             }
         };
 
+        // Creating threads with the Runnable tasks
+        Thread thread1 = new Thread(task1);
+        Thread thread2 = new Thread(task2);
+
+        // Starting the threads
         thread1.start();
         thread2.start();
+        
+        // Optionally join threads to wait for their completion
+        try {
+            thread1.join();
+            thread2.join();
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt(); // Restore interrupted status
+        }
     }
 }
