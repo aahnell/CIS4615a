@@ -3,10 +3,10 @@
  * Ashley Ahnell
  * CIS 4614 Fall 2024
  * Rule 04. Characters and Strings (STR)
- * 
+ * Status: Fixed
  ******************************************************************************/
 
- // Non-Compliant Code Example
+ // Compliant Code Example
  import java.math.BigInteger;
 
 public class CompliantExample {
