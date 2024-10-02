@@ -3,28 +3,27 @@
  * Ashley Ahnell
  * CIS 4614 Fall 2024
  * Rule 01. Declarations and Initialization (DCL)
- * 
+ * Status: Fixed
  ******************************************************************************/
 
- // Non-compliant Code Example
+ // Compliant Code Example
  public class InitializationExample {
 
-    // Vulnerable method that uses an uninitialized variable
+    // Fixed method that ensures the response variable is initialized
     public static String getUserInput(String userInput) {
-        String response;
+        String response = "No input received."; // Initialize the response variable
         
-        // The response variable is declared but not initialized before use
+        // Check if userInput is valid
         if (userInput != null && !userInput.isEmpty()) {
-            response = "Received input: " + userInput;
+            response = "Received input: " + userInput; // Update response if valid input is provided
         }
-        
-        // If userInput is null or empty, response remains uninitialized
-        return response; // Potentially returns a null reference
+
+        return response; // Now response is guaranteed to be initialized
     }
 
     public static void main(String[] args) {
-        // Example usage that demonstrates the vulnerability
-        String result = getUserInput(""); // This will lead to an uninitialized variable
-        System.out.println("Result: " + result); // May throw NullPointerException
+        // Example usage demonstrating the fix
+        String result = getUserInput(""); // This will no longer lead to an uninitialized variable
+        System.out.println("Result: " + result); // Safely prints the initialized response
     }
 }
