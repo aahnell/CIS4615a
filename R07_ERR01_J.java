@@ -6,7 +6,7 @@
  * 
  ******************************************************************************/
 
- // Non-compliant Code Example
+ // Non-Compliant Code Example
  public class ExceptionExample {
     public static void main(String[] args) {
         int[] numbers = {1, 2, 3, 4, 5};
