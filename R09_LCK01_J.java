@@ -6,7 +6,7 @@
  * 
  ******************************************************************************/
 
- // Non-compliant Code Example
+ // Non-Compliant Code Example
  public class LockingExample {
     private static int counter = 0;
 
