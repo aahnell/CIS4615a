@@ -3,11 +3,11 @@
  * Ashley Ahnell
  * CIS 4614 Fall 2024
  * Rule 09. Locking (LCK)
- * 
+ * Status: Fixed
  ******************************************************************************/
 
- // Non-compliant Code Example
- public class LockingExample {
+ // Compliant Code Example
+public class LockingExampleFixed {
     private static int counter = 0;
 
     public static void main(String[] args) {
@@ -27,9 +27,9 @@
         System.out.println("Final counter value: " + counter);
     }
 
-    private static void incrementCounter() {
+    // Synchronized method to ensure thread-safe increments
+    private synchronized static void incrementCounter() {
         for (int i = 0; i < 1000; i++) {
-            // No locking here, leading to potential race condition
             counter++;
         }
     }
