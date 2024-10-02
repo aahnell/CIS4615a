@@ -3,10 +3,10 @@
  * Ashley Ahnell
  * CIS 4614 Fall 2024
  * Rule 08. Visibility and Atomicity (VNA)
- * 
+ * Status: Fixed
  ******************************************************************************/
 
- // Non-compliant Code Example
+ // Compliant Code Example
  public class VisibilityExample {
     private static volatile boolean flag = false; // Declare flag as volatile
 
