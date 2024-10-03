@@ -6,19 +6,18 @@
  * Status: Fixed
  ******************************************************************************/
 
- // Compliant Code Example
  import java.util.logging.Logger;
 import java.util.regex.Pattern;
 
 public class VulnerableLogin {
-    // Logger instance
+    // Set up a logger to track login attempts
     private static final Logger logger = Logger.getLogger(VulnerableLogin.class.getName());
 
     public static void main(String[] args) {
         String username = "admin'; DROP TABLE users; --"; // Example of a malicious input
-        boolean loginSuccessful = true; // Simulating a successful login for demonstration
+        boolean loginSuccessful = true; // Simulate a successful login
 
-        // Logging with input sanitization
+        // Log the result of the login with sanitized input
         if (loginSuccessful) {
             logger.severe("User login succeeded for: " + sanitizeUser(username));
         } else {
@@ -27,7 +26,7 @@ public class VulnerableLogin {
     }
 
     public static String sanitizeUser(String username) {
-        // Check if the username contains only alphanumeric characters
+        // Only allow letters and numbers in the username
         return Pattern.matches("[A-Za-z0-9]+", username) 
             ? username 
             : "unauthorized user";
