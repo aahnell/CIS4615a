@@ -11,22 +11,22 @@
 
 public class CompliantExample {
     public static void main(String[] args) {
-        // Correct code example
-        BigInteger x = new BigInteger("530500452766"); // Valid BigInteger
+        // Create a valid BigInteger
+        BigInteger x = new BigInteger("530500452766");
 
-        // Convert BigInteger to String (valid character data)
+        // Convert BigInteger to String
         String s = x.toString();
 
-        // Convert the String to byte array using default character encoding
+        // Convert the String to a byte array
         byte[] byteArray = s.getBytes();
 
-        // Create a new String from the byte array (valid character data)
+        // Create a new String from the byte array
         String ns = new String(byteArray);
 
         // Create a new BigInteger from the String
-        x = new BigInteger(ns); // This will produce the expected result
+        x = new BigInteger(ns);
 
-        // Output the final value of BigInteger
+        // Print the final value of BigInteger
         System.out.println("Value of x: " + x);
     }
 }
