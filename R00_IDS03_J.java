@@ -6,6 +6,8 @@
  * Status: Fixed
  ******************************************************************************/
 
+
+ // Compliant Code Example
  import java.util.logging.Logger;
 import java.util.regex.Pattern;
 
