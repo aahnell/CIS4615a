@@ -9,21 +9,21 @@
  // Compliant Code Example
  public class InitializationExample {
 
-    // Fixed method that ensures the response variable is initialized
+    // Method that makes sure the response is always set
     public static String getUserInput(String userInput) {
-        String response = "No input received."; // Initialize the response variable
+        String response = "No input received."; // Set a default response
         
         // Check if userInput is valid
         if (userInput != null && !userInput.isEmpty()) {
-            response = "Received input: " + userInput; // Update response if valid input is provided
+            response = "Received input: " + userInput; // Change response if valid input is given
         }
 
-        return response; // Now response is guaranteed to be initialized
+        return response; // Always returns an initialized response
     }
 
     public static void main(String[] args) {
-        // Example usage demonstrating the fix
-        String result = getUserInput(""); // This will no longer lead to an uninitialized variable
-        System.out.println("Result: " + result); // Safely prints the initialized response
+        // Example showing how the method works
+        String result = getUserInput(""); // This avoids any uninitialized variable issues
+        System.out.println("Result: " + result); // Safely prints the response
     }
 }
