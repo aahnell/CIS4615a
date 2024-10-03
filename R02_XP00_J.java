@@ -12,11 +12,12 @@ import java.io.File;
 public class VulnerableFileDeletion {
     public void deleteFile() {
         File someFile = new File("someFileName.txt");
-        // Attempt to delete the file and handle the return value
+        // Try to delete the file and check if it worked
         if (!someFile.delete()) {
-            // Handle failure to delete the file
+            // If it didn't work, print an error message
             System.err.println("Failed to delete the file: " + someFile.getName());
         } else {
+            // If it worked, print a success message
             System.out.println("File deleted successfully: " + someFile.getName());
         }
     }
@@ -27,4 +28,5 @@ public class VulnerableFileDeletion {
         System.out.println("File deletion attempted.");
     }
 }
+
 
