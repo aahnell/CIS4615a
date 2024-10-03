@@ -9,7 +9,7 @@
  // Compliant Code Example
  public class ThreadApiExample {
     public static void main(String[] args) {
-        // Creating tasks using the Runnable interface
+        // Create tasks using the Runnable interface
         Runnable task1 = new Runnable() {
             @Override
             public void run() {
@@ -28,15 +28,15 @@
             }
         };
 
-        // Creating threads with the Runnable tasks
+        // Create threads with the Runnable tasks
         Thread thread1 = new Thread(task1);
         Thread thread2 = new Thread(task2);
 
-        // Starting the threads
+        // Start the threads
         thread1.start();
         thread2.start();
         
-        // Optionally join threads to wait for their completion
+        // Wait for the threads to finish
         try {
             thread1.join();
             thread2.join();
