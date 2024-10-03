@@ -12,7 +12,7 @@ import java.io.IOException;
 
 public class Main {
     public static void main(String[] args) {
-        // Simulated input stream, normally you would read from a real input stream
+        // Example input stream, normally you use a real input source
         DataInputStream dis = new DataInputStream(System.in);
         try {
             long value = getInteger(dis);
@@ -22,13 +22,11 @@ public class Main {
         }
     }
 
-    // Fixed method to read an unsigned int
+    // Method to read an unsigned int
     public static long getInteger(DataInputStream is) throws IOException {
-        return is.readInt() & 0xFFFFFFFFL; // Mask with 32 one-bit values
+        return is.readInt() & 0xFFFFFFFFL; // Mask to handle unsigned values
     }
 }
 
- 
- 
 
 
