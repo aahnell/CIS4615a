@@ -27,7 +27,7 @@ public class LockingExampleFixed {
         System.out.println("Final counter value: " + counter);
     }
 
-    // Synchronized method to ensure thread-safe increments
+    // Synchronized method to make sure increments are thread-safe
     private synchronized static void incrementCounter() {
         for (int i = 0; i < 1000; i++) {
             counter++;
