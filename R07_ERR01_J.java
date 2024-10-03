@@ -11,12 +11,13 @@ public class ExceptionExample {
     public static void main(String[] args) {
         int[] numbers = {1, 2, 3, 4, 5};
 
-        // Properly check the length before accessing the array
-        for (int i = 0; i < numbers.length; i++) { // Change <= to <
+        // Check length before accessing the array
+        for (int i = 0; i < numbers.length; i++) { // Use < instead of <=
             System.out.println(numbers[i]);
         }
 
         System.out.println("Program continues...");
     }
 }
+
 
