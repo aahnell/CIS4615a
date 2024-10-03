@@ -7,24 +7,24 @@
  ******************************************************************************/
 
  // Compliant Code Example
- public class VisibilityExample {
-    private static volatile boolean flag = false; // Declare flag as volatile
+public class VisibilityExample {
+    private static volatile boolean flag = false; // Make flag volatile
 
     public static void main(String[] args) {
         Thread writerThread = new Thread(() -> {
-            // Simulate some work
+            // Simulate work
             try {
                 Thread.sleep(100);
             } catch (InterruptedException e) {
                 Thread.currentThread().interrupt();
             }
-            flag = true;  // Setting the flag to true
+            flag = true;  // Set flag to true
             System.out.println("Flag is set to true.");
         });
 
         Thread readerThread = new Thread(() -> {
             while (!flag) {
-                // Busy-waiting until the flag is true
+                // Wait until the flag is true
             }
             System.out.println("Reader thread detected flag change.");
         });
